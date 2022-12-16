@@ -1,0 +1,29 @@
+.landingPageContainer{
+    display: flex;
+    align-items: center;
+    height: 40em;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.leftSize {
+    img {
+        width: 71em;
+        height: 100%;
+   }
+}
+
+.rightSize {
+    margin-left: 3em;
+    height: 100%;
+    width: 20em;
+}
+
+@media screen and (max-width: 872px) {
+    .landingPageContainer{
+        .leftSize {
+            display: none;
+        }
+    }
+}
+

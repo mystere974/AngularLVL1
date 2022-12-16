@@ -1,0 +1,34 @@
+button {
+  width: 100%;
+  margin: 32px 0.5em 32px 0;
+  border: none;
+  cursor: pointer;
+  background-color: #C2FBD7;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 24px;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 3em;
+  padding: 0 25px;
+  transition: all 200ms;
+
+  &.primary {
+    background-color: #007AFF;
+    &:hover {
+      background-color: #033366;
+      transform: scale(1.05);
+  }
+}
+
+  &.secondary {
+    background-color: #333333;
+  }
+  &:hover {
+background-color: #505351;
+transform: scale(1.05);
+  }
+}

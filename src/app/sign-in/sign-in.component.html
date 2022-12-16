@@ -1,0 +1,21 @@
+
+<h3><strong>Nice to see you again</strong></h3>
+    <div class="loginInput">
+        <app-input-login-password label="Login" placeholder="Email or phone number" (value)="validateLogin($event)"></app-input-login-password>
+        <app-input-login-password label="Password" placeholder="Enter password"></app-input-login-password>
+    </div>
+    <div class="forgotPassword">
+      <div class="rememberMe">
+        <mat-slide-toggle>Remember me</mat-slide-toggle>
+      </div>
+      <div class="forgotPasswordSpan">
+        <a routerLink="">Forgot password?</a>
+      </div>
+    </div>
+    <div>
+      <app-button className="primary" (click)="login()">Sign In</app-button>
+      <hr>
+      <app-button className="secondary">Google</app-button>
+    </div>
+      <span>Don't have an account? <a routerLink="/register">Sign up now</a></span>
+

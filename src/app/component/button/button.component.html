@@ -1,0 +1,4 @@
+<button type="submit" [class]="className" (click)="click.emit()">
+  <img [src]="icon" alt="" *ngIf="icon">
+  <ng-content></ng-content>
+</button>

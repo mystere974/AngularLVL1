@@ -1,0 +1,16 @@
+.loginTitle {
+    display: flex;
+    width: 100%;
+    margin-bottom: 3rem;
+    img {
+        height: 48px;
+        width: 48px;
+    }
+
+    @media screen and (max-width: 872px) {
+        .loginTitle {
+            order: 3;
+        }
+    }
+}
+

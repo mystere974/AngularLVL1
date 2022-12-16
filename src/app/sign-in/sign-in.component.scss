@@ -1,0 +1,39 @@
+.forgotPassword {
+  display: flex;
+  margin: 1em 0 1em 0;
+  align-items: center;
+  justify-content: space-between;
+  font-size: small;
+  font-size: 10px;
+  }
+
+  .forgotPasswordSpan {
+    text-decoration: blueviolet;
+  }
+
+  .buttonLogin {
+    display: flex;
+  }
+
+  .loginInput {
+    width: 10em;
+    margin-right: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .rememberMe {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 872px) {
+
+  }
