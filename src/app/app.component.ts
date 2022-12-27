@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './models/User';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularProjectSimplon';
+  isConnected: boolean = false;
+
+  user!: User;
+
+  constructor() {
+    this.isConnected = (localStorage.getItem('user') !== null)
+  }
 }

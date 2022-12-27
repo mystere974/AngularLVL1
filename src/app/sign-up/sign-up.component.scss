@@ -1,7 +1,3 @@
-.container {
-
-  }
-
   select {
     width: 18%;
     padding: 15px;
@@ -16,7 +12,7 @@
   input {
     margin-bottom: 0.5em;
     margin-top: 0.5em;
-    width: 16rem;
+    width: 83%;
     margin-right: 0;
     border: none;
     border-radius: 2px;
@@ -32,6 +28,7 @@
     display: inline-block;
     border: none;
     background: #f7f7f7;
+    height: 1em;
   }
 
   input[type=text]:focus, input[type=password]:focus, input[type=phone]:focus, select:focus {
@@ -46,7 +43,7 @@
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 83%;
     opacity: 0.9;
     font-size:16px;
     font-family: Montserrat,Arial, Helvetica, sans-serif;
@@ -55,4 +52,10 @@
 
   button:hover {
     opacity:1;
+  }
+
+  @media screen and (max-width: 872px) {
+    button {
+      width: 83%;
+    }
   }

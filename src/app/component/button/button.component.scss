@@ -1,6 +1,6 @@
 button {
   width: 100%;
-  margin: 32px 0.5em 32px 0;
+  margin: 20px 0;
   border: none;
   cursor: pointer;
   background-color: #C2FBD7;
@@ -25,10 +25,10 @@ button {
 }
 
   &.secondary {
-    background-color: #333333;
+    background-color: #ad0000;
   }
   &:hover {
-background-color: #505351;
+background-color: #700000;
 transform: scale(1.05);
   }
 }

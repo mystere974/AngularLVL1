@@ -1,23 +1,23 @@
-<a [routerLink]="['/']" routerLinkActive="router-link-active">Back</a>
+<a [routerLink]="['/']" routerLinkActive="router-link-active" [ngStyle]="{'color' : 'DeepSkyBlue'}">Back</a>
 
 <h1>Inscription</h1>
 
 <div class="container">
   <form id="signUpForm" [formGroup]="form"  (ngSubmit)="submit()">
-      <label for="firstname">Pseudo</label><br>
+      <label for="firstname" [ngStyle]="{'margin-left' : '1em'}">Pseudo</label><br>
       <input type="text" name="firstname" id="firstname" placeholder="Entrer un pseudo" formControlName="firstname">
       <div *ngIf="form.controls?.['firstname']?.dirty || form.controls?.['firstname']?.touched">
         <span *ngIf="form.controls?.['firstname']?.errors" [ngStyle]="{'color' : 'red'}">Le nom est obligatoire</span>
       </div>
 
-      <label for="email">Email</label><br>
+      <label for="email" [ngStyle]="{'margin-left' : '1em'}">Email</label><br>
       <input type="email" name="email" id="email" placeholder="Entrer un Email" formControlName="email">
       <div *ngIf="email?.touched && email?.errors">
         <span *ngIf="email?.errors!['email']" [ngStyle]="{'color' : 'red'}">Le format est invalide</span><br>
         <span *ngIf="email?.errors!['required']" [ngStyle]="{'color' : 'red'}">L'email est obligatoire</span>
       </div>
 
-      <label for="passw">Password</label><br>
+      <label for="passw" [ngStyle]="{'margin-left' : '1em'}">Password</label><br>
       <input type="password" placeholder="Entrer un mot de passe" formControlName="password">
       <div *ngIf="password?.touched && password?.errors" [ngStyle]="{'color' : 'red'}">
         Le mot de passe doit contenir 8 caracteres minimum et 10 caractères maximum
@@ -25,23 +25,15 @@
 
       <div formArrayName="phones">
         <div *ngFor="let phone of phones.controls; let i=index;" [formGroupName]="i">
-          <label for="phone">Numéro de téléphone</label><br>
-          <select formControlName="phonePrefix" required>
-            <option selected hidden value="">Code</option>
-            <option value="66">+98</option>
-            <option value="66">+99</option>
-            <option value="66">+90</option>
-            <option value="66">+66</option>
-          </select>
-          <input type="phone" name="phone" placeholder="812345678" formControlName="phoneNumber">
-          <span (click)="deletePhone(i)">X</span>
+          <label for="phone" [ngStyle]="{'margin-left' : '1em'}">Numéro de téléphone</label><br>
+          <input type="phone" name="phone" placeholder="0550554030" formControlName="phoneNumber">
+          <span (click)="deletePhone(i)"> X</span>
           <div *ngIf="getPhoneNumber(i)?.touched && getPhoneNumber(i)?.errors" [ngStyle]="{'color' : 'red'}"> Numéro de téléphone invalide
           </div>
         </div>
       </div>
-    <div (click)="addPhone()">+ Ajouter un numéro de téléphone</div>
-
-
+    <div (click)="addPhone()" *ngIf="phones.length < 2">+ Ajouter un numéro de téléphone</div>
+    <span *ngIf="phones?.length == 2">Impossible d'ajouter d'autres champs</span>
     <div class="clearfix">
       <button type="submit" class="btn">S'enregistrer</button>
     </div>
